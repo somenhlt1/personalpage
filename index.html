@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
+    <title>Porfolio</title>
+    <link rel="stylesheet" href="./index.css">
+
+</head>
+<body>
+    <div class="header">
+        <div class="left-header"><img class="logo" src="./logo.png"/>JNN</div>
+        <div class="right-header">
+            <div class="right-tab">Home</div>
+            <div class="right-tab">Skills</div>
+            <div class="right-tab">Project</div>
+            <div class="right-tab button">Contact</div>
+        </div>
+    </div>
+  <main class="main-content">
+    <section>
+       <div class="text-container">
+        <h3>
+            Welcome to my porfolio! <br/>
+        </h3>
+        <span id="changable-text">
+            Hi, I am Jay Nguyen Web Developer_
+        </span>
+       </div>
+        <div class="img-button-container">
+            <img class="img-button"src="./btn_connect-removebg-preview.png"></img>
+        </div>
+    </section>
+    
+  </main>
+ 
+</body>
+<script>
+    const element = document.getElementById("changable-text");
+    const text = element.innerText;
+    var loopNum = 0;
+    let ticker = setInterval(()=>{
+        if(loopNum > 2000){
+            loopNum = 0;
+        }
+        let i = loopNum % 2;
+        let updateText = text.substring(0,text.length-1);
+        if(i === 0){
+            element.innerText = updateText;
+        }else{
+            element.innerText = text;
+        }
+        loopNum++;
+    },1000);
+</script>
+</html>
