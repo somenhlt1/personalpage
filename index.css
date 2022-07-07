@@ -24,7 +24,7 @@ body{
 
 main{
     height: calc(100% - var(--header-height));
-    background-image: url("./bg-porfolio.jpg");
+    background-image: url("./images/bg-porfolio.jpg");
     background-size: cover;
     background-position: center;
 }
